@@ -71,7 +71,7 @@ class Client(models.Model):
     dni = models.CharField(max_length=10, unique=True, verbose_name='Dni')
     birthday = models.DateField(default=datetime.now, verbose_name='Fecha de Nacimiento')
     address = models.CharField(max_length=150, null=True,blank=True)
-    name = models.CharField(max_length=10, choices=gender_choices, default='Femenino', verbose_name='Sexo')
+    sex = models.CharField(max_length=10, choices=gender_choices, default='Femenino', verbose_name='Sexo')
 
     def __str__(self):
         return self.names
